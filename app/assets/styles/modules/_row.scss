@@ -1,0 +1,41 @@
+.row {
+    
+    @include atMedium {
+        display: flex;
+    }
+
+    &--gutters {
+        margin-right: -65px;
+
+        > div {
+            padding-right: 65px;
+        }
+    }
+
+    &__b-margin-until-medium {
+        margin-bottom: 1rem;
+    }
+
+    @include atMedium {
+
+        &__b-margin-until-medium {
+            margin-bottom: 0;
+        }
+
+        &__medium-4 {
+            flex: 3.33;
+
+            &--larger {
+                flex: 3.7;
+            }
+        }
+    
+        &__medium-8 {
+            flex: 6.66;
+
+            &--smaller {
+                flex: 6.3;
+            }
+        }
+    }
+}
