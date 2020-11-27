@@ -2,6 +2,14 @@
     
     @include atMedium {
         display: flex;
+
+        &--with-large-coloumn {
+            display: block;
+
+            @include atLarge {
+                display: flex;
+            }
+        }
     }
 
     &--gutters {
@@ -17,6 +25,14 @@
 
         > div {
             padding-right: 100px;
+        }
+    }
+
+    &--gutters-small {
+        margin-right: -45px;
+
+        > div {
+            padding-right: 45px;
         }
     }
 
@@ -47,6 +63,58 @@
 
             &--smaller {
                 flex: 6.3;
+            }
+        }
+    }
+
+    @include atLarge {
+
+        &__b-margin-until-large {
+            margin-bottom: 0;
+        }
+
+        &__large-4 {
+            flex: 3.33;
+
+            &--larger {
+                flex: 3.7;
+            }
+        }
+
+        &__large-6 {
+            flex: 5;
+        }
+    
+        &__large-8 {
+            flex: 6.66;
+
+            &--smaller {
+                flex: 6.3;
+            }
+        }
+    }
+
+    &--t-padding {
+        padding-top: 80px;
+    }
+
+    /* Equal Heights Rule */
+    &--equal-height-at-medium {
+
+        @include atMedium {
+
+            > div {
+                display: flex;
+            }
+        }
+    }
+
+    &--equal-height-at-large {
+
+        @include atLarge {
+
+            > div {
+                display: flex;
             }
         }
     }
