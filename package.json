@@ -31,6 +31,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "lodash": "^4.17.20",
     "normalize.css": "^8.0.1"
   }
 }
