@@ -21,8 +21,20 @@
 
     &__btn-container {
 
+        a {
+            transition: all .3s ease-out;
+        }
+
         @include atMedium {
             float: right;
+
+            .site-header--dark & {
+            
+                a {
+                    color: #fff;
+                    background-color: $mainOrange;
+                }
+            }
         }
     }
 

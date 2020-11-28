@@ -1,0 +1,20 @@
+.social-icons {
+    text-align: center;
+
+    &__icon {
+        background-color: $mainOrange;
+        display: inline-flex;
+        width: 33%;
+        height: 72px;
+        margin: 0 5px 5px 5px;
+
+        @include atSmall {
+            width: 72px;
+        }
+
+        img {
+            display: inline-block;
+            margin: auto;
+        }
+    }
+}
