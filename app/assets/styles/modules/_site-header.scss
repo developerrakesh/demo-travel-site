@@ -10,7 +10,13 @@
     }
 
     @include atMedium {
+        position: fixed;
         background-color: rgba($mainBlue, .3);
+        transition: background-color 1s ease-out;
+
+        &--dark {
+            background-color: rgba(23, 51, 72, .85);
+        }
     }
 
     &__btn-container {
@@ -32,6 +38,12 @@
             left: auto;
             transform: translateX(0);
             padding: 25px 36px;
+            transform-origin: 50% 0;
+            transition: transform .3s ease-out;
+
+            .site-header--dark & {
+                transform: scale(.55);
+            }
         }
     }
 

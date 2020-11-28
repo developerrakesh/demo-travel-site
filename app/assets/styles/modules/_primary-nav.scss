@@ -41,6 +41,11 @@
             padding: 12px 0;
             font-size: 1rem;
             background-color: transparent;
+            transition: color .3s ease-out;
+
+            &.is-current-link {
+                color: #fabb69;
+            }
         }
     }
 

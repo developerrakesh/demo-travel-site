@@ -30,7 +30,6 @@ class RevealOnScroll {
         this.itemsToReveal.forEach(el => {
             if(!el.isRevealed) {
                 this.showIfScrolledTo(el);
-                console.log('page scrolled');
             }
         });
     }
