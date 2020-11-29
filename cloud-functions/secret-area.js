@@ -28,11 +28,13 @@ exports.handler = function(event, context, callback) {
     if(body.password == "rakesh") {
         callback(null, {
             statusCode: 200,
+            headers,
             body: secretContent
         });
     } else {
         callback(null, {
-            statusCode: 401
+            statusCode: 401,
+            headers
         });
     }
 }
