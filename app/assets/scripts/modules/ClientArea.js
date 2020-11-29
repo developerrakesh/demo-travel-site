@@ -29,7 +29,7 @@ class ClientArea {
             this.form.remove();
             this.contentArea.innerHTML = res.data;
         }).catch(() => {
-            this.contentArea.innerHTML = `<p class="clien-area__error">Secret Phase is not Correct</p>`;
+            this.contentArea.innerHTML = `<p class="client-area__error">Secret Phase is not Correct</p>`;
             this.field.value = '';
             this.field.focus();
         });
