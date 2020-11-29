@@ -1,5 +1,8 @@
 exports.handler = function(event, context, callback) {
-    const secretContent = ``;
+    const secretContent = `
+        <h3>Welcom To The Secret Area</h3>
+        <p>The <strong>sky</strong> is blue</p>
+    `;
     
     let body;
 
@@ -12,7 +15,7 @@ exports.handler = function(event, context, callback) {
     if(body.password == "rakesh") {
         callback(null, {
             statusCode: 200,
-            body: "Welcome to the super secret area"
+            body: secretContent
         });
     } else {
         callback(null, {
