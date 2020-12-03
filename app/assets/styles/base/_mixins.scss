@@ -7,7 +7,7 @@
 
 //to target medium width screens
 @mixin  atMedium {
-    @media (min-width: 800px) {
+    @media (min-width: 845px) {
         @content;
     }
 }
