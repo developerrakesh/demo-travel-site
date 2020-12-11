@@ -1477,7 +1477,7 @@ module.exports = toNumber;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + "modal" + "." + "5f6028f790c00cf6a91f" + ".js";
+/******/ 			return "" + "modal" + "." + "bbabc198ed3a38d6fc54" + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -1486,7 +1486,7 @@ module.exports = toNumber;
 /******/ 		// This function allow to reference all chunks
 /******/ 		__webpack_require__.miniCssF = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "styles." + {"582":"5f6028f790c00cf6a91f"}[chunkId] + ".css";
+/******/ 			return "styles." + {"582":"bbabc198ed3a38d6fc54"}[chunkId] + ".css";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -1707,7 +1707,7 @@ var MobileMenu = /*#__PURE__*/function () {
       var _this = this;
 
       this.menuIcon.addEventListener('click', function () {
-        return _this.toggleTheMenu();
+        _this.toggleTheMenu();
       });
     }
   }, {
@@ -1820,7 +1820,6 @@ var StickyHeader = /*#__PURE__*/function () {
     this.siteHeader = document.querySelector('.site-header');
     this.pagesSections = document.querySelectorAll('.page-section');
     this.browserHeight = window.innerHeight;
-    this.previousScrollY = window.scrollY;
     this.events();
   }
 
@@ -1835,30 +1834,23 @@ var StickyHeader = /*#__PURE__*/function () {
       window.addEventListener('resize', debounce_default()(function () {
         _this.browserHeight = window.innerHeight;
       }, 400));
-    }
-  }, {
-    key: "calcScrollDirection",
-    value: function calcScrollDirection() {
-      if (window.scrollY > this.previousScrollY) {
-        this.scrollDirection = 'down';
-      } else {
-        this.scrollDirection = 'up';
-      }
+    } //To highlight menu-link when scrolled to corresponding section
 
-      this.previousScrollY = window.scrollY;
-    }
   }, {
     key: "calcSection",
     value: function calcSection(el) {
       if (window.scrollY + this.browserHeight > el.offsetTop && window.scrollY < el.offsetTop + el.offsetHeight) {
-        var scrollPercent = el.getBoundingClientRect().top / this.browserHeight * 100;
+        var scrollPercentTop = el.getBoundingClientRect().top / this.browserHeight * 100;
+        var scrollPercentBottom = el.getBoundingClientRect().bottom / this.browserHeight * 100;
+        var matchingLink = el.getAttribute('data-link');
 
-        if (scrollPercent < 18 && scrollPercent > -0.1 && this.scrollDirection == 'down' || scrollPercent < 33 && this.scrollDirection == 'up') {
-          var matchingLink = el.getAttribute('data-link');
+        if (scrollPercentTop < 45 && scrollPercentBottom > 45) {
           document.querySelectorAll(".primary-nav a:not(".concat(matchingLink, ")")).forEach(function (el) {
             return el.classList.remove('is-current-link');
           });
           document.querySelector(matchingLink).classList.add('is-current-link');
+        } else {
+          document.querySelector(matchingLink).classList.remove('is-current-link');
         }
       }
     }
@@ -1866,8 +1858,6 @@ var StickyHeader = /*#__PURE__*/function () {
     key: "runOnScroll",
     value: function runOnScroll() {
       var _this2 = this;
-
-      this.calcScrollDirection();
 
       if (window.scrollY > 60) {
         this.siteHeader.classList.add('site-header--dark');

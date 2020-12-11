@@ -8,7 +8,7 @@ class Modal {
 
     injectHTML() {
         document.body.insertAdjacentHTML('beforeend', `
-            <div class="modal">
+            <div class="modal" role="dialog" aria-modal="true" aria-expanded="false">
                 <div class="modal__inner">
                 <h2 class="section-title section-title--blue section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon"> Get in <strong>Touch</strong></h2>
                 <div class="wrapper wrapper--narrow">
@@ -29,10 +29,12 @@ class Modal {
 
     openModal() {
         this.modal.classList.add('modal--show');
+        this.modal.setAttribute('aria-expanded', true);
     }
 
     hideModal() {
         this.modal.classList.remove('modal--show');
+        this.modal.setAttribute('aria-expanded', false);
     }
 
     keyPressHandler(evt) {

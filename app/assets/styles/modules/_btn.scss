@@ -7,6 +7,10 @@
     border: none;
     cursor: pointer;
 
+    &:focus {
+        outline: auto;
+    }
+
     &--orange {
         background-color: $mainOrange;
     }

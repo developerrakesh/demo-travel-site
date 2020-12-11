@@ -16,6 +16,14 @@ img {
     box-sizing: border-box;
 }
 
+*[tabindex]:focus {
+    outline: none;
+}
+
 a {
     color: $mainOrange;
+
+    &[tabindex]:focus {
+        outline: auto;
+    }
 }
