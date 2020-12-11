@@ -27,7 +27,7 @@ var Modal = /*#__PURE__*/function () {
   _createClass(Modal, [{
     key: "injectHTML",
     value: function injectHTML() {
-      document.body.insertAdjacentHTML('beforeend', "\n            <div class=\"modal\" role=\"dialog\" aria-modal=\"true\" aria-expanded=\"false\">\n                <div class=\"modal__inner\">\n                <h2 class=\"section-title section-title--blue section-title--less-margin\"><img src=\"assets/images/icons/mail.svg\" class=\"section-title__icon\"> Get in <strong>Touch</strong></h2>\n                <div class=\"wrapper wrapper--narrow\">\n                    <p class=\"modal__description\">We will have an online order system in place soon. Until then, connect with us on any of the platforms below!</p>\n                </div>\n            \n                <div class=\"social-icons\">\n                    <a href=\"#\" class=\"social-icons__icon\"><img src=\"assets/images/icons/facebook.svg\" alt=\"Facebook\"></a>\n                    <a href=\"#\" class=\"social-icons__icon\"><img src=\"assets/images/icons/twitter.svg\" alt=\"Twitter\"></a>\n                    <a href=\"#\" class=\"social-icons__icon\"><img src=\"assets/images/icons/instagram.svg\" alt=\"Instagram\"></a>\n                    <a href=\"#\" class=\"social-icons__icon\"><img src=\"assets/images/icons/youtube.svg\" alt=\"YouTube\"></a>\n                </div>\n                </div>\n                <div class=\"modal__close\">X</div>\n            </div>\n        ");
+      document.body.insertAdjacentHTML('beforeend', "\n            <div class=\"modal\" role=\"dialog\" aria-modal=\"true\" aria-expanded=\"false\">\n                <div class=\"modal__inner\">\n                <h2 class=\"section-title section-title--blue section-title--less-margin\"><img src=\"assets/images/icons/mail.svg\" class=\"section-title__icon\"> Get in <strong>Touch</strong></h2>\n                <div class=\"wrapper wrapper--narrow\">\n                    <p class=\"modal__description\">We will have an online order system in place soon. Until then, connect with us on any of the platforms below!</p>\n                </div>\n            \n                <div class=\"social-icons\">\n                    <a href=\"#\" class=\"social-icons__icon\"><img src=\"assets/images/icons/facebook.svg\" alt=\"Facebook\"></a>\n                    <a href=\"#\" class=\"social-icons__icon\"><img src=\"assets/images/icons/twitter.svg\" alt=\"Twitter\"></a>\n                    <a href=\"#\" class=\"social-icons__icon\"><img src=\"assets/images/icons/instagram.svg\" alt=\"Instagram\"></a>\n                    <a href=\"#\" class=\"social-icons__icon\"><img src=\"assets/images/icons/youtube.svg\" alt=\"YouTube\"></a>\n                </div>\n                </div>\n                <div class=\"modal__close\" role=\"button\" aria-label=\"close modal button\" tabindex=\"11\">X</div>\n            </div>\n        ");
     }
   }, {
     key: "openModal",
@@ -46,6 +46,12 @@ var Modal = /*#__PURE__*/function () {
     value: function keyPressHandler(evt) {
       if (evt.keyCode == 27) {
         this.hideModal();
+      }
+
+      if (evt.keyCode == 13 || evt.keyCode == 32) {
+        if (document.activeElement == this.closeIcon) {
+          this.hideModal();
+        }
       }
     }
   }, {

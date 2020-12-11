@@ -22,8 +22,4 @@ img {
 
 a {
     color: $mainOrange;
-
-    &[tabindex]:focus {
-        outline: auto;
-    }
 }

@@ -1477,7 +1477,7 @@ module.exports = toNumber;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + "modal" + "." + "bbabc198ed3a38d6fc54" + ".js";
+/******/ 			return "" + "modal" + "." + "19798fb8d630905a728a" + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -1486,7 +1486,7 @@ module.exports = toNumber;
 /******/ 		// This function allow to reference all chunks
 /******/ 		__webpack_require__.miniCssF = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "styles." + {"582":"bbabc198ed3a38d6fc54"}[chunkId] + ".css";
+/******/ 			return "styles." + {"582":"19798fb8d630905a728a"}[chunkId] + ".css";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -1707,7 +1707,7 @@ var MobileMenu = /*#__PURE__*/function () {
       var _this = this;
 
       this.menuIcon.addEventListener('click', function () {
-        _this.toggleTheMenu();
+        return _this.toggleTheMenu();
       });
     }
   }, {

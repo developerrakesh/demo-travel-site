@@ -6,13 +6,20 @@
     display: inline-block;
     border: none;
     cursor: pointer;
+    transition: all .2s ease-out;
 
-    &:focus {
-        outline: auto;
+    &:hover, &:focus {
+        color: $mainBlue;
+        background-color: #fff;
     }
 
     &--orange {
         background-color: $mainOrange;
+
+        &:hover, &:focus {
+            color: $mainOrange;
+            background-color: #fff;
+        }
     }
 
     &--large {

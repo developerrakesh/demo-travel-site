@@ -43,7 +43,7 @@
             background-color: transparent;
             transition: color .3s ease-out;
 
-            &.is-current-link {
+            &.is-current-link, &:focus {
                 color: #fabb69;
             }
         }

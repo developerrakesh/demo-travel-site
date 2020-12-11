@@ -22,7 +22,7 @@ class Modal {
                     <a href="#" class="social-icons__icon"><img src="assets/images/icons/youtube.svg" alt="YouTube"></a>
                 </div>
                 </div>
-                <div class="modal__close">X</div>
+                <div class="modal__close" role="button" aria-label="close modal button" tabindex="11">X</div>
             </div>
         `);
     }
@@ -40,6 +40,11 @@ class Modal {
     keyPressHandler(evt) {
         if (evt.keyCode == 27) {
             this.hideModal();
+        }
+        if (evt.keyCode ==  13 || evt.keyCode == 32) {
+            if(document.activeElement == this.closeIcon) {
+                this.hideModal();
+            }
         }
     }
 

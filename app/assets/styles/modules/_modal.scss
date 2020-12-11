@@ -42,7 +42,7 @@
         transform: scaleX(1.2);
         transition: all .15s ease-out;
 
-        &:hover {
+        &:hover, &:focus {
             color: $mainOrange;
             transform: scaleX(1.5) scaleY(1.2);
         }
