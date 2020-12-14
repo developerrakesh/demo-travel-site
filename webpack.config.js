@@ -91,7 +91,7 @@ if(currentTask == 'build') {
         minimizer: [ new CssMinimizerPlugin() ]
     }
     config.plugins.push(
-        new CleanWebpackPlugin(), 
+        new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: ['**/*', '!CNAME*']}), 
         new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
         new RunAfterCompile()
         );
