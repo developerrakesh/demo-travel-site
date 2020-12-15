@@ -2,6 +2,11 @@
     font-weight: 300;
     font-size: 1.9rem;
     color: $mainBlue;
+    transition: transform .1s ease-out;
+
+    &:focus {
+        transform: scale(1.1);
+    }
 
     @include atSmall {
         font-size: 2.875rem;

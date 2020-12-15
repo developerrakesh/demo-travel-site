@@ -4,7 +4,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const fse = require('fs-extra');
 const { defer } = require('lodash');
 
@@ -39,6 +38,7 @@ let pages = fse.readdirSync('./app').filter(file => {
 }).map(page => {
     return new HtmlWebpackPlugin({
         filename: page,
+        scriptLoading: 'defer',
         template: `./app/${page}`
     });
 });
@@ -95,7 +95,6 @@ if(currentTask == 'build') {
     config.plugins.push(
         new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: ['**/*', '!CNAME*']}), 
         new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
-        new ScriptExtHtmlWebpackPlugin({defaultAttribute: 'defer'}),
         new RunAfterCompile()
         );
 }

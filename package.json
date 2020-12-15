@@ -22,7 +22,6 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
-    "@babel/preset-react": "^7.12.7",
     "autoprefixer": "^10.0.2",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
@@ -34,7 +33,6 @@
     "postcss-loader": "^4.1.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
-    "script-ext-html-webpack-plugin": "^2.1.5",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.6.0",
@@ -45,8 +43,6 @@
     "axios": "^0.21.0",
     "lazysizes": "^5.2.2",
     "lodash": "^4.17.20",
-    "normalize.css": "^8.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "normalize.css": "^8.0.1"
   }
 }
