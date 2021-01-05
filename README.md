@@ -1,8 +1,8 @@
 This is demo site to showcase my tech skills and code writing skills.
 Features:
- High performance Single Page App
- Best Practices incorporated
- Seo and Accessibility optimized (check lighthouse audit)
+1. High performance Single Page App
+2. Best Practices incorporated
+3. Seo and Accessibility optimized (check lighthouse audit)
  Optimized image sizes for different screen widths for faster load time
  High dp images automatically fed for high dpi screens
  Lazyload used for images to increase site speed
