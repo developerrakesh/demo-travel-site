@@ -16,3 +16,4 @@ Features:
 14. Babel used to make es6 compatible to older browsers
 15. Automatic minification of css, js and html with webpack for production files
 16. Clean and readable code
+17. App can also be browsed with the help of keyboard
