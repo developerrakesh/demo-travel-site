@@ -1,5 +1,5 @@
 This is demo site to showcase my tech skills and code writing skills.
-\n**Features:**
+/n**Features:**
 1. *High performance Single Page App*
 2. *Best Practices incorporated (check lighthouse audit)*
 3. *Optimized image sizes for different screen widths for faster load time*
