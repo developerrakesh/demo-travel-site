@@ -15,4 +15,4 @@ Features:
 13. Each js class responsible for a single functionality
 14. Babel used to make es6 compatible to older browsers
 15. Automatic minification of css, js and html with webpack for production files
-16. Intuitive names for css classes and js files
+16. Clean and readable code
